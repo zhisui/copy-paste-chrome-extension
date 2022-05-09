@@ -1,0 +1,14 @@
+{
+    "name": "copy and paste",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "copy and paste",
+    "action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+      },
+    "permission": ["tabs", "<all_urls>"]
+}

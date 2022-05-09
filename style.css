@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border:0;
+}
+
+.container{
+    width: 360px;
+    height: 200px;
+    background-color: #2C3D4D;
+    color:#fff;
+    padding: 35px;
+}
+.section1{
+    margin-bottom: 14px;
+
+}
+
+select{
+    font-size: 16px;
+    width:200px;
+    height:29px;
+}
+option{
+    color: black;
+    background: #E8ECEB;
+    line-height: 20px;
+}
+option:hover{
+    background: #FFA103;
+}
+button{
+    margin-left: 10px;
+    padding: 6px 10px;
+    height:29px;
+    cursor: pointer;
+    border-radius:4px;
+    background-color:#FFA103;
+    color:#fff;
+    font-size: 16px;
+}
+
+.search_engine_choice {
+    letter-spacing: 1px;
+    font-size: 20px;
+    opacity: 0.3;
+}
+
+
+
+
