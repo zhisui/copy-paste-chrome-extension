@@ -19,6 +19,8 @@ const sendOptinaValue = (option) => {
     )
 }
 
+
+
 document.querySelector("button").addEventListener("click", () => {
     document.querySelectorAll("option").forEach((option) => {
         if (option.selected) {
@@ -26,7 +28,7 @@ document.querySelector("button").addEventListener("click", () => {
         }
     })
 })
-
+//好像没必要加这个，要不然的按钮就没用了
 const select = document.querySelector("select")
 select.addEventListener("change", () => {
     let index = select.selectedIndex //获取option的下标
