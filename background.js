@@ -12,5 +12,22 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.message === 'save_search_engine') {
         current_search_engine = request.payload;
         sendResponse({ message: 'success' });
+    } else if (request.message === 'get_current_search_engine') {
+        sendResponse({ payload: current_search_engine });
+    } else if (request.message === 'search') {
+        chrome.tabs.create({
+            active:true,
+            url:`${search_engines[current_search_engine]}${request.payload}`
+        })
     }
 });
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    if (/^http/.test(tab.url) && changeInfo.status === 'complete') {
+        chrome.tabs.executeScript(tabId, {file:  './scripts/foreground.js'}, () => {
+            console.log('The foreground script has been injected.')
+        })
+    }
+})
+
+
